@@ -31,10 +31,10 @@ The project has a number of enablers and constrains which informed the approach 
 
 #### Enablers
 
-- Open access data
+- Open access data: libraries, archives and museums make large amounts of their data available under permissive licences (primarily Creative Commons)
 - IIIF (more on this below)
-- Existing metadata 
-  
+- Existing metadata: existing metadata for collections items can enable filtering and retrieval of relevant material more easily. 
+
 #### Constaints
 
 - Labelled data
