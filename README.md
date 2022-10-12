@@ -49,8 +49,8 @@ The project has a number of enablers and constrains which informed the approach 
 - Computation for inference: libraries, archives and museums have a broad range of computational resources available. Whilst some have GPU clusters, or can access these via cloud providers, this is not the case for all institutions. 
 
 #### Approach
-:w
 
+Our approach aims to balance the enablers and the constrains outlined above. 
 
 #### Tools
 
