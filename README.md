@@ -63,6 +63,30 @@ Our approach aims to balance the enablers and the constrains outlined above.
 
 #### IIIF (International Image Interoperability Framework) 
 
+##### A very quick intro to the IIIF image API
+
+
+```
+https://iiif.archivelab.org/iiif/memoirslettersof01bernuoft$10/full/full/0/default.jpg
+```
+
+![](https://iiif.archivelab.org/iiif/memoirslettersof01bernuoft$10/full/full/0/default.jpg)
+
+```
+{scheme}://{server}{/prefix}/{identifier}/{region}/{size}/{rotation}/{quality}.{format}
+
+```
+
+
+```
+https://iiif.archivelab.org/iiif/memoirslettersof01bernuoft$10/full/full/180/default.jpg
+```
+
+
+![](https://iiif.archivelab.org/iiif/memoirslettersof01bernuoft$10/full/250,/180/default.jpg)
+
+
+
 #### Outputs 
 
 Our Hugging Face hub organisation ([https://huggingface.co/ImageIN](https://huggingface.co/ImageIN)) hold outputs generated from this project. 
