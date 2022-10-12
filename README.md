@@ -54,7 +54,7 @@ The project has a number of enablers and constrains which informed the approach 
 
 #### Tools
 
-- **[Snorkel](https://github.com/snorkel-team/snorkel** is used for helping generate labels using labelling functions
+- **[Snorkel](https://github.com/snorkel-team/snorkel)** is used for helping generate labels using labelling functions
 - **Weights and Biases** is used for tracking model training
 - **🤗 datasets** is used for processing our data and moving it between machines via the Hugging Face hub 
 - **🤗 transformers:** we use transformer implementation of the computer vision models we use and the `Trainer` class for model training. 
