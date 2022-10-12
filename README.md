@@ -29,7 +29,7 @@ For this project we primarily used data from the Internet Archive.
 | [ImageIN/IA_unlabelled](https://huggingface.co/datasets/ImageIN/IA_unlabelled)     | This a dataset of pages from historic digitised books held by the Internet Archive. To increase the presence of illustrations in downstream datasets the words 'illustration' are used in the intial search |
 | [ImageIn_annotations](https://huggingface.co/datasets/ImageIN/ImageIn_annotations) | This dataset is sampled from the full unlabelled dataset and contains hand annotated labels indicating if a page is 'illustrated' or 'not-illustrated'                                                      |
 | [ImageIN/IA_loaded](https://huggingface.co/datasets/ImageIN/IA_loaded)                                                                                   | This is a subset of `ImageIN/IA_unlabelled` where images have been loaded into the dataset from their URLs. This is done to avoid having to rerun this step when developing/applying labelling functions                                                                                                                                                                                                     |
-|[ImageIN/unlabelled_IA_with_snorkel_labels](https://huggingface.co/datasets/ImageIN/unlabelled_IA_with_snorkel_labels)                                                                                    | This dataset contains the data from `ImageIN/IA_loaded` with weak labels applied using [Snorkel](https://github.com/snorkel-team/snorkel) (see below ofr more details)                                                                                                                                                                                                            |
+|[ImageIN/unlabelled_IA_with_snorkel_labels](https://huggingface.co/datasets/ImageIN/unlabelled_IA_with_snorkel_labels)                                                                                    | This dataset contains the data from `ImageIN/IA_loaded` with weak labels applied using [Snorkel](https://github.com/snorkel-team/snorkel) (see below for more details)                                                                                                                                                                                                            |
 
 
 
@@ -43,13 +43,13 @@ The project has a number of enablers and constrains which informed the approach 
 - IIIF (more on this below)
 - Existing metadata: existing metadata for collections items can enable filtering and retrieval of relevant material more easily. 
 
-#### Constaints
+#### Constraints
 
-- Labelled data
-- Computation for inference
+- Labelled data: there exists neither a large dataset for this task (that we're aware of).
+- Computation for inference: libraries, archives and museums have a broad range of computational resources available. Whilst some have GPU clusters, or can access these via cloud providers, this is not the case for all institutions. 
 
 #### Approach
-
+:w
 
 
 #### Tools
