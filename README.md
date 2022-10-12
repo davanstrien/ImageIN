@@ -55,5 +55,9 @@ The project has a number of enablers and constrains which informed the approach 
 
 #### IIIF (International Image Interoperability Framework) 
 
+#### Outputs 
+
+Our Hugging Face hub organisation ([https://huggingface.co/ImageIN](https://huggingface.co/ImageIN)) hold outputs generated from this project. 
+
 
 ### Further work and possible enhancements
