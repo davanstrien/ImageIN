@@ -22,7 +22,15 @@ Over the past couple of decades libraries, archives, museums, and other organisa
 
 ### Project data 
 
-For this project we primarily used data from the Internet Archive. 
+For this project we primarily used data from the Internet Archive.
+
+| Dataset                                                                             | Description                                                                                                                                                                                                 |
+|-------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [ImageIN/IA_unlabelled](https://huggingface.co/datasets/ImageIN/IA_unlabelled)      | This a dataset of pages from historic digitised books held by the Internet Archive. To increase the presence of illustrations in downstream datasets the words 'illustration' are used in the intial search |
+| [ImageIn_annotations](https://huggingface.co/datasets/ImageIN/ImageIn_annotations) | This dataset is sampled from the full unlabelled dataset and contains hand annotated labels indicating if a page is 'illustrated' or 'not-illustrated'                                                                                                                                                                                                           |
+|                                                                                     |                                                                                                                                                                                                             |
+|                                                                                     |                                                                                                                                                                                                             |
+
 
 
 ### Approach and tools used 
