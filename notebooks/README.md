@@ -28,6 +28,8 @@ This search results in `44,561` items. Since each book is made up of pages, we c
 
 ### Labelling using weak supervision
 
+[IA_weak_pipeline.ipynb](https://github.com/davanstrien/ImageIN/blob/data-documentatioin/notebooks/IA_weak_pipeline.ipynb) uses a subset of the unlabelled data and defines labelling functions to label the data using the [snorkel](https://snorkel.readthedocs.io/en/v0.9.7/) library. 
+
 ## Model training
 
 
