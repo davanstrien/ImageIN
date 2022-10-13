@@ -63,6 +63,22 @@ Our approach aims to balance the enablers and the constrains outlined above.
 
 #### IIIF (International Image Interoperability Framework) 
 
+[IIIF](https://iiif.io/) (International Image Interoperability Framework), is
+
+>a way to standardize the delivery of images and audio/visual files from servers to different environments on the Web where they can then be viewed and interacted with in many ways. [source](https://iiif.io/get-started/how-iiif-works/)
+
+It's beyond the scope of this README to explain all of the aspects of this standard. [https://iiif.io/get-started/how-iiif-works/](https://iiif.io/get-started/how-iiif-works/) provides a good starting point to learning more about IIIF.
+
+One thing that you may be inevitability wondering is whether anyone actually uses this standard. 
+
+![](https://imgs.xkcd.com/comics/standards.png)
+[source](https://xkcd.com/927)
+
+In contrast to many standards, IIIF has seen wide adoption particularly in the cultural heritage sector. Users include; the British Library, Brown University Digital Repository,  David Rumsey Map Collection, Europeana, Harvard Art Museum,  Internet Archive...
+
+Basically a lot of organisations are adopting IIIF. There are two particular components of this standard that will be of interest to us for this project. 
+
+
 ##### A very quick intro to the IIIF image API
 
 IIIF includes an image API specification. Let's take a look at an example IIIF URL from the Internet Archive
@@ -98,6 +114,8 @@ This is helpful for a number of reasons:
 - we can request an image closer to the size we'll need for model training/inference. Many computer vision models expect images to be much smaller in size than the default images we'd get back from the Internet Archive (or other institutions). Often images are very large/high-resolution to start with but we don't necessarily need this for computer vision uses. 
 - this smaller image scaling is done on the server supplying the image. This means we can request an image close to the size we need and only receive the data we need. This makes requesting images quicker. 
 - since this URL is structured we can use it to identify the source it came from. This can mean less book keeping will be required for linking predictions back to other metadata systems (more on this below)
+
+#### A very quick introduction to the IIIF presentation API 
 
 
 
