@@ -117,6 +117,84 @@ This is helpful for a number of reasons:
 
 #### A very quick introduction to the IIIF presentation API 
 
+> Access to digital representations of objects is a fundamental requirement for many research activities, for the transmission of cultural knowledge, and for the daily pursuits of every web citizen. Ancient scrolls, paintings, letters, books, newspapers, films, operas, albums, field recordings, and computer generated animations are compound objects: they can have many parts, and complex structures. These resources may also bear the written or spoken word, and this linguistic content is often as important as the visual or audible representation.
+
+> Collections of both digitized physical objects and much born-digital content benefit from a standardized description of their structure, layout, and presentation mode. This document specifies this standardized description of the collection or compound object, using a JSON format. Many different rich and dynamic user experiences can be implemented, presenting content from across collections and institutions. 
+
+[Source](https://iiif.io/api/presentation/3.0/)
+
+A visual representation of this:
+
+![](https://iiif.io/api/assets/images/data-model.png)
+
+We won't be able to get your head fully around this standard here, instead we'll focus on a quick example. We'll work with this manifest [https://iiif.archivelab.org/iiif/exhibitorsherald99unse/manifest.json](https://iiif.archivelab.org/iiif/exhibitorsherald99unse/manifest.json). 
+
+This manifest is a JSON document. The document has the following keys:
+
+``` bash
+[
+  "@context",
+  "@id",
+  "@type",
+  "attribution",
+  "cover",
+  "description",
+  "label",
+  "logo",
+  "metadata",
+  "related",
+  "seeAlso",
+  "sequences",
+  "thumbnail",
+  "viewingHint"
+]
+```
+
+If we dig further into the `sequences` key, we get to an array that contains page images (you'll notice that we have IIIF image URLs). 
+
+``` json
+
+[
+  {
+    "@context": "http://iiif.io/api/image/2/context.json",
+    "@id": "https://iiif.archivelab.org/iiif/exhibitorsherald99unse/canvas/default",
+    "@type": "sc:Sequence",
+    "canvases": [
+      {
+        "@context": "http://iiif.io/api/presentation/2/context.json",
+        "@id": "https://iiif.archivelab.org/iiif/exhibitorsherald99unse$0/canvas",
+        "@type": "sc:Canvas",
+        "description": "",
+        "height": 4159,
+        "images": [
+          {
+            "@context": "http://iiif.io/api/image/2/context.json",
+            "@id": "https://iiif.archivelab.org/iiif/exhibitorsherald99unse$0/annotation",
+            "@type": "oa:Annotation",
+            "motivation": "sc:painting",
+            "on": "https://iiif.archivelab.org/iiif/exhibitorsherald99unse$0/annotation",
+            "resource": {
+              "@id": "https://iiif.archivelab.org/iiif/exhibitorsherald99unse$0/full/full/0/default.jpg",
+              "@type": "dctypes:Image",
+              "format": "image/jpeg",
+              "height": 4159,
+              "service": {
+                "@context": "http://iiif.io/api/image/2/context.json",
+                "@id": "https://iiif.archivelab.org/iiif/exhibitorsherald99unse$0",
+                "profile": "https://iiif.io/api/image/2/profiles/level2.json"
+              },
+              "width": 2758
+            }
+          }
+        ],
+        "label": "p. ",
+        "width": 2758
+      },
+]
+```
+
+This means that the manifest for a book can be used to generate URLs for all the book page images.
+
 
 
 #### Outputs 
@@ -125,3 +203,4 @@ Our Hugging Face hub organisation ([https://huggingface.co/ImageIN](https://hugg
 
 
 ### Further work and possible enhancements
+    
