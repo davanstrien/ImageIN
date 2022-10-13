@@ -22,7 +22,8 @@ The internet archive has a [command line tool](https://archive.org/developers/in
 ia search "title:(illustrated OR illustrations OR picture OR pictures) AND mediatype:(texts) AND date:[1800-01-01 TO 1950-01-01]" -> itemlist.jsonl
 ```
 
-This search results in `44,561` items. Since each book is made up of pages, we create a dataset that has a row for each page since this is the level at which our model will work. 
+This search results in `44,561` items. Since each book is made up of pages, we create a dataset that has a row for each page since this is the level at which our model will work. Splitting the data to the page level results in [https://huggingface.co/datasets/ImageIN/IA_unlabelled](https://huggingface.co/datasets/ImageIN/IA_unlabelled). This contains `1,0844,387` pages. 
+
 
 
 ### Labelling using weak supervision
