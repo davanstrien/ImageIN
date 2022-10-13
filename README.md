@@ -65,23 +65,31 @@ Our approach aims to balance the enablers and the constrains outlined above.
 
 ##### A very quick intro to the IIIF image API
 
+IIIF includes an image API specification. Let's take a look at an example IIIF URL from the Internet Archive
 
 ```
 https://iiif.archivelab.org/iiif/memoirslettersof01bernuoft$10/full/full/0/default.jpg
 ```
+ 
+This image is what we get back if we load this URL
 
 ![](https://iiif.archivelab.org/iiif/memoirslettersof01bernuoft$10/full/full/0/default.jpg)
+
+If we take a look at the specification for the image API we see that the URL structure contains information about how we want to have the image we're interested in returned to us.  
 
 ```
 {scheme}://{server}{/prefix}/{identifier}/{region}/{size}/{rotation}/{quality}.{format}
 
 ```
 
+For example, we can specify that we want the same image, but scaled to 250 pixels wide and rotated 180 degrees 
+
 
 ```
-https://iiif.archivelab.org/iiif/memoirslettersof01bernuoft$10/full/full/180/default.jpg
+https://iiif.archivelab.org/iiif/memoirslettersof01bernuoft$10/full/250,/180/default.jpg
 ```
 
+If we load this URL we get this image
 
 ![](https://iiif.archivelab.org/iiif/memoirslettersof01bernuoft$10/full/250,/180/default.jpg)
 
