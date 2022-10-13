@@ -193,7 +193,7 @@ If we dig further into the `sequences` key, we get to an array that contains pag
 ]
 ```
 
-This means that the manifest for a book can be used to generate URLs for all the book page images.
+This means that the manifest for a book can be used to generate URLs for all the book page images, this means we can also use models created as part of this project to identify all the illustrated pages in a particular book or set of books. 
 
 
 
