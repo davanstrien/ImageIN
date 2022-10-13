@@ -9,6 +9,10 @@ This repository contains work done as part of the 2022 edition of the [Full Stac
 
 ![A digitized image from a historic book. The page only contains text](https://iiif.archivelab.org/iiif/memoirslettersof01bernuoft$105/full/250,/0/default.jpg) ![A digitized image from a historic book. The page only contains an illustration](https://iiif.archivelab.org/iiif/memoirslettersof01bernuoft$10/full/250,/0/default.jpg)
 
+### Outputs 
+
+If you want to get straight to the outputs of this project you can find the datasets, models and demos on our Hugging Face hub organisation ([https://huggingface.co/ImageIN](https://huggingface.co/ImageIN)). 
+
 ### Background
 
 Over the past couple of decades libraries, archives, museums, and other organisations have increasingly digitised content they hold. This includes a large number of digitised books. Some of these books contain illustrations, it would be nice to be able to identify pages which contain illustrations so that:
@@ -196,10 +200,6 @@ If we dig further into the `sequences` key, we get to an array that contains pag
 This means that the manifest for a book can be used to generate URLs for all the book page images, this means we can also use models created as part of this project to identify all the illustrated pages in a particular book or set of books. 
 
 
-
-#### Outputs 
-
-Our Hugging Face hub organisation ([https://huggingface.co/ImageIN](https://huggingface.co/ImageIN)) hold outputs generated from this project. 
 
 
 ### Further work and possible enhancements
