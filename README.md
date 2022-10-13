@@ -93,6 +93,12 @@ If we load this URL we get this image
 
 ![](https://iiif.archivelab.org/iiif/memoirslettersof01bernuoft$10/full/250,/180/default.jpg)
 
+This is helpful for a number of reasons:
+
+- we can request an image closer to the size we'll need for model training/inference. Many computer vision models expect images to be much smaller in size than the default images we'd get back from the Internet Archive (or other institutions). Often images are very large/high-resolution to start with but we don't necessarily need this for computer vision uses. 
+- this smaller image scaling is done on the server supplying the image. This means we can request an image close to the size we need and only receive the data we need. This makes requesting images quicker. 
+- since this URL is structured we can use it to identify the source it came from. This can mean less book keeping will be required for linking predictions back to other metadata systems (more on this below)
+
 
 
 #### Outputs 
