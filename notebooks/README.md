@@ -16,12 +16,13 @@ For this particular project we start with data from the internet archive. The ov
 
 ### Initial data gathering 
 
+The internet archive has a [command line tool](https://archive.org/developers/internetarchive/cli.html) that can be used to interact with their collections. In this case we use the `search` command to identify books (texts) between 1800 and 1950 with words in the title that are likely to indicate the presence of illustrations. We store the outputs of this search in a JSON Lines file. 
+
 ``` bash
 ia search "title:(illustrated OR illustrations OR picture OR pictures) AND mediatype:(texts) AND date:[1800-01-01 TO 1950-01-01]" -> itemlist.jsonl
 ```
 
-
-
+This search results in `44,561` items. Since each book is made up of pages, we create a dataset that has a row for each page since this is the level at which our model will work. 
 
 
 ### Labelling using weak supervision
