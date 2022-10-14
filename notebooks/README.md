@@ -24,14 +24,11 @@ ia search "title:(illustrated OR illustrations OR picture OR pictures) AND media
 
 This search results in `44,561` items. Since each book is made up of pages, we create a dataset that has a row for each page since this is the level at which our model will work. Splitting the data to the page level results in [https://huggingface.co/datasets/ImageIN/IA_unlabelled](https://huggingface.co/datasets/ImageIN/IA_unlabelled). This contains `1,0844,387` pages. 
 
-
 ### Labelling using weak supervision
 
-The [IA_weak_pipeline.ipynb](https://github.com/davanstrien/ImageIN/blob/data-documentatioin/notebooks/IA_weak_pipeline.ipynb) notebook uses a subset of the unlabelled data and defines labelling functions to label the data using the [snorkel](https://snorkel.readthedocs.io/en/v0.9.7/) library. These labelling functions are Python functions that aim to predict whether a particular page image is illustrated or not based on some heurititics or rules. 
+The [IA_weak_pipeline.ipynb](https://github.com/davanstrien/ImageIN/blob/data-documentatioin/notebooks/IA_weak_pipeline.ipynb) notebook uses a subset of the unlabelled data and defines labelling functions to label the data using the [snorkel](https://snorkel.readthedocs.io/en/v0.9.7/) library. These labelling functions are Python functions that aim to predict whether a particular page image is illustrated or not based on some heuristics or rules. 
 
 The power of snorkel is that it allows us to combine different labelling functions all of which may only label a subset of the data (and may make some mistakes) and generate a combined probability of the label for each data point. 
-
-## Model training
 
 
 
