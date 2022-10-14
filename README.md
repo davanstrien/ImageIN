@@ -23,7 +23,6 @@ Over the past couple of decades libraries, archives, museums, and other organisa
 - so you can look at nice pictures more easily
 - ... 
 
-
 ### Project data 
 
 For this project we primarily used data from the Internet Archive.
@@ -35,6 +34,9 @@ For this project we primarily used data from the Internet Archive.
 | [ImageIN/IA_loaded](https://huggingface.co/datasets/ImageIN/IA_loaded)                                                                                   | This is a subset of `ImageIN/IA_unlabelled` where images have been loaded into the dataset from their URLs. This is done to avoid having to rerun this step when developing/applying labelling functions                                                                                                                                                                                                     |
 |[ImageIN/unlabelled_IA_with_snorkel_labels](https://huggingface.co/datasets/ImageIN/unlabelled_IA_with_snorkel_labels)                                                                                    | This dataset contains the data from `ImageIN/IA_loaded` with weak labels applied using [Snorkel](https://github.com/snorkel-team/snorkel) (see below for more details)                                                                                                                                                                                                            |
 
+
+
+You can read more about the data workflow [here](https://github.com/davanstrien/ImageIN/tree/main/notebooks/)
 
 
 ### Approach and tools used 
