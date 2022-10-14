@@ -13,6 +13,21 @@ This repository contains work done as part of the 2022 edition of the [Full Stac
 
 If you want to get straight to the outputs of this project you can find the datasets, models and demos on our Hugging Face hub organisation ([https://huggingface.co/ImageIN](https://huggingface.co/ImageIN)). 
 
+### Try the model 
+
+We have two demos for the project:
+
+- [Single Image Demo](https://huggingface.co/spaces/ImageIN/UI_space)
+- [IIIF manifest Demo](https://huggingface.co/spaces/ImageIN/iiif_book_manifest_illustration_detection)
+
+If you want to run the model locally against a directory of images, you can also use the model(s) we trained via [flyswot](https://github.com/davanstrien/flyswot/). For example to predict all `.png` images in a directory `images` you can run:
+
+```bash
+flyswot predict directory images/ /Users/dvanstrien/Desktop --image-formats .png --model-id ImageIN/convnext-base-224_finetuned_on_ImageIn_annotations
+```
+
+This will generate a CSV report saved at `/Users/dvanstrien/Desktop` with the predicted labels for each image. 
+
 ### Background
 
 Over the past couple of decades libraries, archives, museums, and other organisations have increasingly digitised content they hold. This includes a large number of digitised books. Some of these books contain illustrations, it would be nice to be able to identify pages which contain illustrations so that:
@@ -34,8 +49,6 @@ For this project we primarily used data from the Internet Archive.
 | [ImageIn_annotations](https://huggingface.co/datasets/ImageIN/ImageIn_annotations) | This dataset is sampled from the full unlabelled dataset and contains hand annotated labels indicating if a page is 'illustrated' or 'not-illustrated'                                                      |
 | [ImageIN/IA_loaded](https://huggingface.co/datasets/ImageIN/IA_loaded)                                                                                   | This is a subset of `ImageIN/IA_unlabelled` where images have been loaded into the dataset from their URLs. This is done to avoid having to rerun this step when developing/applying labelling functions                                                                                                                                                                                                     |
 |[ImageIN/unlabelled_IA_with_snorkel_labels](https://huggingface.co/datasets/ImageIN/unlabelled_IA_with_snorkel_labels)                                                                                    | This dataset contains the data from `ImageIN/IA_loaded` with weak labels applied using [Snorkel](https://github.com/snorkel-team/snorkel) (see below for more details)                                                                                                                                                                                                            |
-
-
 
 ### Approach and tools used 
 
